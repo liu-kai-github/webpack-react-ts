@@ -1,11 +1,11 @@
-const path = require('path');
-const webpack = require('webpack');
-const merge = require('webpack-merge');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const common = require('./webpack.common.js');
+import * as path from 'path';
+import * as webpack from 'webpack';
+import * as merge from 'webpack-merge';
+import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
+import * as HtmlWebpackPlugin from 'html-webpack-plugin';
+import commonConfig from './webpack.common';
 
-module.exports = merge(common, {
+const devConfig: webpack.Configuration = merge(commonConfig, {
     module: {
         rules: [
             {
@@ -70,3 +70,5 @@ module.exports = merge(common, {
         }),
     ],
 });
+
+export default devConfig;

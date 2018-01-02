@@ -1,13 +1,13 @@
-const path = require('path');
-const webpack = require('webpack');
-const merge = require('webpack-merge');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const common = require('./webpack.common.js');
+import * as path from 'path';
+import * as webpack from 'webpack';
+import * as merge from 'webpack-merge';
+import * as CleanWebpackPlugin from 'clean-webpack-plugin';
+// const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
+import * as HtmlWebpackPlugin from 'html-webpack-plugin';
+import commonConfig from './webpack.common';
 
-module.exports = merge(common, {
+const prodConfig: webpack.Configuration = merge(commonConfig, {
     devtool: 'source-map',
     entry: {
         vendor: [
@@ -61,9 +61,9 @@ module.exports = merge(common, {
             },
         }),
         new webpack.HashedModuleIdsPlugin(),
-        new UglifyJSPlugin({
-            sourceMap: true,
-        }),
+        // new UglifyJSPlugin({
+        //     sourceMap: true,
+        // }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
         }),
@@ -102,3 +102,5 @@ module.exports = merge(common, {
         // publicPath: 'http://localhost:8088',
     },
 });
+
+export default prodConfig;

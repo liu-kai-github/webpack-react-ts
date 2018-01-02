@@ -1,6 +1,7 @@
-const path = require('path');
+import * as path from 'path';
+import * as webpack from 'webpack';
 
-module.exports = {
+const commonConfig: webpack.Configuration = {
     entry: {
         main: path.resolve(__dirname, './src/main.jsx'),
     },
@@ -17,3 +18,5 @@ module.exports = {
     },
     plugins: [],
 };
+
+export default commonConfig;
