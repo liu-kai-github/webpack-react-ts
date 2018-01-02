@@ -1,24 +1,24 @@
-.App {
+:local(.app) {
   text-align: center;
 }
 
-.App-logo {
+:local(.appLogo) {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
-.App-header {
+:local(.appHeader) {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
 }
 
-.App-title {
+:local(.appTitle) {
   font-size: 1.5em;
 }
 
-.App-intro {
+:local(.appIntro) {
   font-size: large;
 }
 
