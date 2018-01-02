@@ -3,6 +3,7 @@ import * as webpack from 'webpack';
 import * as merge from 'webpack-merge';
 import * as CleanWebpackPlugin from 'clean-webpack-plugin';
 // const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+import * as UglifyJSPlugin from 'uglifyjs-webpack-plugin';
 import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import commonConfig from './webpack.common';
@@ -61,9 +62,9 @@ const prodConfig: webpack.Configuration = merge(commonConfig, {
             },
         }),
         new webpack.HashedModuleIdsPlugin(),
-        // new UglifyJSPlugin({
-        //     sourceMap: true,
-        // }),
+        new UglifyJSPlugin({
+            sourceMap: true,
+        }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
         }),
