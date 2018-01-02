@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/8.8.1/bin/node /usr/local/Cellar/yarn/1.2.1/libexec/bin/yarn.js add @type/extract-text-webpack-plugin --dev
+  /usr/local/Cellar/node/8.8.1/bin/node /usr/local/Cellar/yarn/1.2.1/libexec/bin/yarn.js add @type/react-dom
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -26,8 +26,13 @@ npm manifest:
       "lint": "eslint ./src/**{js,jsx} ./src/**/**{js,jsx} ./src/**/**/**{js,jsx} ./src/**/**/**/**{js,jsx} ./src/**/**/**/**/**{js,jsx} ./src/**/**/**/**/**/**{js,jsx} ./src/**/**/**/**/**/**/**{js,jsx} ./src/**/**/**/**/**/**/**/**{js,jsx}"
     },
     "devDependencies": {
+      "@types/clean-webpack-plugin": "^0.1.0",
+      "@types/extract-text-webpack-plugin": "^3.0.0",
+      "@types/html-webpack-plugin": "^2.30.1",
       "@types/node": "^8.5.2",
+      "@types/react": "^16.0.31",
       "@types/webpack": "^3.8.1",
+      "@types/webpack-merge": "^4.1.1",
       "babel-core": "^6.26.0",
       "babel-eslint": "^8.0.3",
       "babel-loader": "^7.1.2",
@@ -44,6 +49,7 @@ npm manifest:
       "html-webpack-plugin": "^2.30.1",
       "pre-commit": "^1.2.2",
       "style-loader": "^0.19.0",
+      "ts-loader": "^3.2.0",
       "ts-node": "^4.1.0",
       "typescript": "^2.6.2",
       "uglifyjs-webpack-plugin": "^1.1.2",
@@ -56,9 +62,7 @@ npm manifest:
       "react": "^16.2.0",
       "react-dom": "^16.2.0"
     },
-    "pre-commit": [
-      "lint"
-    ]
+    "pre-commit": []
   }
 
 yarn manifest: 
@@ -122,9 +126,48 @@ Lockfile:
       lodash "^4.2.0"
       to-fast-properties "^2.0.0"
   
+  "@types/clean-css@*":
+    version "3.4.30"
+    resolved "https://registry.yarnpkg.com/@types/clean-css/-/clean-css-3.4.30.tgz#0052c136f5248002428e3638b37de4a39818641d"
+  
+  "@types/clean-webpack-plugin@^0.1.0":
+    version "0.1.0"
+    resolved "https://registry.yarnpkg.com/@types/clean-webpack-plugin/-/clean-webpack-plugin-0.1.0.tgz#c498a595a4174b0a313ce42de7e52575c122f5a4"
+    dependencies:
+      "@types/webpack" "*"
+  
+  "@types/extract-text-webpack-plugin@^3.0.0":
+    version "3.0.0"
+    resolved "https://registry.yarnpkg.com/@types/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.0.tgz#103ab0e0e6ccd21edfee1e434d59d30b92ea26ab"
+    dependencies:
+      "@types/webpack" "*"
+  
+  "@types/html-minifier@*":
+    version "1.1.30"
+    resolved "https://registry.yarnpkg.com/@types/html-minifier/-/html-minifier-1.1.30.tgz#3b3817c27df23922f7b5aa87eff45b3ab934aec9"
+    dependencies:
+      "@types/clean-css" "*"
+      "@types/relateurl" "*"
+      "@types/uglify-js" "*"
+  
+  "@types/html-webpack-plugin@^2.30.1":
+    version "2.30.1"
+    resolved "https://registry.yarnpkg.com/@types/html-webpack-plugin/-/html-webpack-plugin-2.30.1.tgz#9ef1b8062bd1ff2f2e45e1d92d1b6fcdf50a5c54"
+    dependencies:
+      "@types/html-minifier" "*"
+      "@types/webpack" "*"
+  
   "@types/node@*", "@types/node@^8.5.2":
     version "8.5.2"
     resolved "https://registry.yarnpkg.com/@types/node/-/node-8.5.2.tgz#83b8103fa9a2c2e83d78f701a9aa7c9539739aa5"
+  
+  "@types/react@^16.0.31":
+    version "16.0.31"
+    resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.31.tgz#5285da62f3ac62b797f6d0729a1d6181f3180c3e"
+  
+  "@types/relateurl@*":
+    version "0.2.28"
+    resolved "https://registry.yarnpkg.com/@types/relateurl/-/relateurl-0.2.28.tgz#6bda7db8653fa62643f5ee69e9f69c11a392e3a6"
   
   "@types/source-map@*":
     version "0.5.2"
@@ -148,7 +191,13 @@ Lockfile:
     dependencies:
       "@types/source-map" "*"
   
-  "@types/webpack@^3.8.1":
+  "@types/webpack-merge@^4.1.1":
+    version "4.1.1"
+    resolved "https://registry.yarnpkg.com/@types/webpack-merge/-/webpack-merge-4.1.1.tgz#9641e3c5d92f220239663855cc5a1ffcc53f5d83"
+    dependencies:
+      "@types/webpack" "*"
+  
+  "@types/webpack@*", "@types/webpack@^3.8.1":
     version "3.8.1"
     resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-3.8.1.tgz#20c11ea43f1ea7bb09eee4d6d633d830653e5a55"
     dependencies:
@@ -1913,7 +1962,7 @@ Lockfile:
     dependencies:
       once "^1.4.0"
   
-  enhanced-resolve@^3.4.0:
+  enhanced-resolve@^3.0.0, enhanced-resolve@^3.4.0:
     version "3.4.1"
     resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-3.4.1.tgz#0421e339fd71419b3da13d129b3979040230476e"
     dependencies:
@@ -4624,7 +4673,7 @@ Lockfile:
     dependencies:
       node-forge "0.6.33"
   
-  "semver@2 || 3 || 4 || 5", semver@^5.3.0:
+  "semver@2 || 3 || 4 || 5", semver@^5.0.1, semver@^5.3.0:
     version "5.4.1"
     resolved "https://registry.yarnpkg.com/semver/-/semver-5.4.1.tgz#e059c09d8571f0540823733433505d3a2f00b18e"
   
@@ -5090,6 +5139,15 @@ Lockfile:
   trim-right@^1.0.1:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
+  
+  ts-loader@^3.2.0:
+    version "3.2.0"
+    resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-3.2.0.tgz#23211922179b81f7448754b7fdfca45b8374a15a"
+    dependencies:
+      chalk "^2.3.0"
+      enhanced-resolve "^3.0.0"
+      loader-utils "^1.0.2"
+      semver "^5.0.1"
   
   ts-node@^4.1.0:
     version "4.1.0"
@@ -5589,7 +5647,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/yn/-/yn-2.0.0.tgz#e5adabc8acf408f6385fc76495684c88e6af689a"
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@type%2fextract-text-webpack-plugin: Not found
+  Error: https://registry.yarnpkg.com/@type%2freact-dom: Not found
       at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.2.1/libexec/lib/cli.js:62027:18)
       at Request.self.callback (/usr/local/Cellar/yarn/1.2.1/libexec/lib/cli.js:123011:22)
       at emitTwo (events.js:125:13)
