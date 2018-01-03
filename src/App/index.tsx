@@ -1,16 +1,17 @@
-import * as React from 'react';
+import * as React from "react";
 
-const logo = require('./logo.svg');
-const {app, appLogo, appHeader, appTitle, appIntro} = require('./App.css');
+const logo = require("./logo.svg");
+const {app, appLogo, appHeader, appTitle, appIntro} = require("./App.css");
 
-class App extends React.Component {
+class App extends React.Component<{}, {}> {
 
     constructor(props) {
         super(props);
         this.state = {};
     }
 
-    render() {
+    public render() {
+
         return (
             <div className={app}>
                 <header className={appHeader}>

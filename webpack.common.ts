@@ -1,22 +1,22 @@
-import * as path from 'path';
-import * as webpack from 'webpack';
+import * as path from "path";
+import * as webpack from "webpack";
 
 const commonConfig: webpack.Configuration = {
     entry: {
-        main: path.resolve(__dirname, './src/main.tsx'),
-    },
-    resolve: {
-        extensions: ['.ts', '.tsx', '.js']
+        main: path.resolve(__dirname, "./src/main.tsx"),
     },
     module: {
         rules: [
             {
+                loaders: ["babel-loader", "ts-loader"],
                 test: /\.ts|tsx$/,
-                loaders: ['babel-loader', 'ts-loader'],
             },
         ],
     },
     plugins: [],
+    resolve: {
+        extensions: [".ts", ".tsx", ".js", "svg"],
+    },
 };
 
 export default commonConfig;
