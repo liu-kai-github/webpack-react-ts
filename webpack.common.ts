@@ -15,7 +15,7 @@ const commonConfig: webpack.Configuration = {
     },
     plugins: [],
     resolve: {
-        extensions: [".ts", ".tsx", ".js", "svg"],
+        extensions: [".ts", ".tsx", ".js"],
     },
 };
 
