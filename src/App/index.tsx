@@ -1,7 +1,7 @@
 import * as React from "react";
 
 const logo = require("./logo.svg");
-const {app, appLogo, appHeader, appTitle, appIntro} = require("./App.css");
+const {boxStyle} = require("./App.less");
 
 class App extends React.Component<{}, {}> {
 
@@ -13,16 +13,16 @@ class App extends React.Component<{}, {}> {
     public render() {
 
         return (
-            <div className={app}>
-                <header className={appHeader}>
+            <div className={boxStyle}>
+                <header className="appHeader">
                     <img
                         src={logo}
-                        className={appLogo}
+                        className="appLogo"
                         alt="logo"
                     />
-                    <h1 className={appTitle}>Welcome to React</h1>
+                    <h1 className="appTitle">Welcome to React</h1>
                 </header>
-                <p className={appIntro}>
+                <p className="appIntro">
                     To get started, edit <code>src/App/index.tsx</code> and save to reload.
                 </p>
             </div>

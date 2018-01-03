@@ -18,12 +18,30 @@ const devConfig: webpack.Configuration = merge(commonConfig, {
     devtool: "cheap-module-eval-source-map",
     module: {
         rules: [
+            // {
+            //     test: /\.css$/,
+            //     use: [
+            //         "style-loader",
+            //         {
+            //             loader: "css-loader",
+            //             options: {
+            //                 sourceMap: true,
+            //             },
+            //         },
+            //     ],
+            // },
             {
-                test: /\.css$/,
+                test: /\.less/,
                 use: [
                     "style-loader",
                     {
                         loader: "css-loader",
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                    {
+                        loader: "less-loader",
                         options: {
                             sourceMap: true,
                         },

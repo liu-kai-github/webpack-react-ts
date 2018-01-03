@@ -1,4 +1,4 @@
-# webpack-react
+# webpack-react-ts
 
 ### 安装环境
 
@@ -43,7 +43,7 @@ yarn lint
 
 ### 风格指南
 
-* 请严格按照已下规范进行开发(否则将无法向版本库提交代码)
+* 请严格按照以下规范进行开发(否则将无法向版本库提交代码)
 * 参考链接
 	1. [tslint](https://palantir.github.io/tslint/rules/)
 	2. [tslint-react](https://github.com/palantir/tslint-react)

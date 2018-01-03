@@ -19,7 +19,7 @@ const prodConfig: webpack.Configuration = merge(commonConfig, {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.less$/,
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
                     use: [
@@ -31,6 +31,12 @@ const prodConfig: webpack.Configuration = merge(commonConfig, {
                                 // modules: true,
                                 // localIdentName: "[path][name]__[local]--[hash:base64:5]",
                                 minimize: true,
+                                sourceMap: true,
+                            },
+                        },
+                        {
+                            loader: "less-loader",
+                            options: {
                                 sourceMap: true,
                             },
                         },
