@@ -2,22 +2,18 @@
 
 ### 安装环境
 
-* node.js ```^8.0.0``` [https://nodejs.org](https://nodejs.org)
-* yarn ```^1.0.0```  [https://yarnpkg.com](https://yarnpkg.com)
-
-### 风格指南
-
-* 请严格按照此规范进行开发(否则将无法向版本库提交代码) [https://github.com/airbnb/javascript/tree/master/react](https://github.com/airbnb/javascript/tree/master/react)
+* node.js ``` v8+ ``` [https://nodejs.org](https://nodejs.org)
+* yarn ``` v1+ ```  [https://yarnpkg.com](https://yarnpkg.com)
 
 ### 编辑器
 
 * 强烈推荐 **WebStorm**
 	* 如果使用 WebStorm , .editorconfig 将自动与其关联，然后只需打开 Setting =>
-Languages & Frameworks => JavaScript => Code Quality Tools => ESLint ,将 Enable 选中, .eslintrc.js 即可与 WebStorm 正常关联
+Languages & Frameworks => TypeScript => TSLint ,将 Enable 选中, tslint.json 即可与 WebStorm 正常关联
 
 * 如果是其他编辑器
 	1. 为使 ```.editorconfig``` 正常使用，请 [点击链接](http://editorconfig.org/#download) 查看本编辑器是否需要下载插件，如需下载，请按要求安装
-	2. 为使 ```.eslintrc.js``` 正常使用，请 [点击链接](http://eslint.cn/docs/user-guide/integrations) 查看本编辑器与 .eslintrc.js 的集成方法
+	2. 为使 ```tslint.json``` 与编辑器正常关联，请 [点击链接](https://palantir.github.io/tslint/usage/third-party-tools/) 查看本编辑器与 tslint.json 的集成方法
 
 ### 启动项目
 
@@ -45,25 +41,14 @@ yarn build
 yarn lint
 ```
 
+### 风格指南
+
+* 请严格按照已下规范进行开发(否则将无法向版本库提交代码)
+* 参考链接
+	1. [tslint](https://palantir.github.io/tslint/rules/)
+	2. [tslint-react](https://github.com/palantir/tslint-react)
 
 ```
-/**
- * @license
- * Copyright 2016 Palantir Technologies, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 export const rules = {
     "adjacent-overload-signatures": true,
     "align": {
@@ -150,7 +135,7 @@ export const rules = {
     // disable this rule as it is very heavy performance-wise and not that useful
     "no-use-before-declare": false,
     "no-var-keyword": true,
-    "no-var-requires": true,
+    "no-var-requires": false,
     "object-literal-key-quotes": {
         options: ["consistent-as-needed"],
     },
@@ -351,5 +336,16 @@ export const jsRules = {
             "check-typecast",
         ],
     },
+    "jsx-alignment": true,
+    "jsx-boolean-value": true,
+    "jsx-curly-spacing": [true, "never"],
+    "jsx-equals-spacing": [true, "never"],
+    "jsx-key": true,
+    "jsx-no-bind": true,
+    "jsx-no-lambda": true,
+    "jsx-no-multiline-js": true,
+    "jsx-no-string-ref": true,
+    "jsx-self-close": true,
+    "jsx-wrap-multiline": true
 };
 ```
