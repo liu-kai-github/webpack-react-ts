@@ -175,7 +175,7 @@ javascript用弱类型比较 let a=1 ; let b="1",是可以相等的,但用===是
 * 规则修改
 
 ```
-"no-reference": true,: true ==> "no-reference": false
+"no-reference": true ==> "no-reference": false
 ```
 
 * 原因
