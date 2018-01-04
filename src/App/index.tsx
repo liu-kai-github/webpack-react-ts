@@ -1,7 +1,7 @@
 import * as React from "react";
 
-const logo = require("./logo.svg");
-const {boxStyle} = require("./App.less");
+import {boxStyle} from "./App.less";
+import * as logo from "./logo.svg";
 
 class App extends React.Component<{}, {}> {
 
@@ -11,15 +11,10 @@ class App extends React.Component<{}, {}> {
     }
 
     public render() {
-
         return (
             <div className={boxStyle}>
                 <header className="appHeader">
-                    <img
-                        src={logo}
-                        className="appLogo"
-                        alt="logo"
-                    />
+                    <img src={logo} className="appLogo" alt="logo" />
                     <h1 className="appTitle">Welcome to React</h1>
                 </header>
                 <p className="appIntro">
