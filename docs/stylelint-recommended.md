@@ -1,4 +1,6 @@
-# 目前使用的StyleLint规则
+# StyleLint规则
+
+## stylelint-config-recommended
 
 ```
 module.exports = {

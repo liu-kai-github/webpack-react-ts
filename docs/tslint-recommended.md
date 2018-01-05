@@ -1,3 +1,7 @@
+# tslint 规则
+
+## tslint:recommended
+
 ```
 export const rules = {
     "adjacent-overload-signatures": true,
@@ -85,7 +89,7 @@ export const rules = {
     // disable this rule as it is very heavy performance-wise and not that useful
     "no-use-before-declare": false,
     "no-var-keyword": true,
-    "no-var-requires": false,
+    "no-var-requires": true,
     "object-literal-key-quotes": {
         options: ["consistent-as-needed"],
     },
@@ -286,6 +290,14 @@ export const jsRules = {
             "check-typecast",
         ],
     },
+};
+```
+
+## tslint-react 规则
+
+```
+module.exports = {
+  "rules": {
     "jsx-alignment": true,
     "jsx-boolean-value": true,
     "jsx-curly-spacing": [true, "never"],
@@ -297,5 +309,7 @@ export const jsRules = {
     "jsx-no-string-ref": true,
     "jsx-self-close": true,
     "jsx-wrap-multiline": true
+  }
 };
 ```
+

@@ -2,8 +2,6 @@
 
 ## 1. selector-pseudo-class-no-unknown
 
-* 状态 **待讨论**
-
 * 规则修改
 
 ```
