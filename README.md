@@ -8,12 +8,15 @@
 ### 编辑器
 
 * 强烈推荐 **WebStorm**
-	* 如果使用 WebStorm , .editorconfig 将自动与其关联，然后只需打开 Setting =>
-Languages & Frameworks => TypeScript => TSLint ,将 Enable 选中, tslint.json 即可与 WebStorm 正常关联
+	1. 如果使用 WebStorm , .editorconfig 将自动与其关联
+	2. 打开 Setting => Languages & Frameworks => TypeScript => TSLint ,将 Enable 选中, tslint.json 即可与 WebStorm 正常关联
+	3. 打开 Setting => Languages & Frameworks => Stylesheets => Stylelint ,将 Enable 选中, .stylelintrc 即可与 WebStorm 正常关联
+
 
 * 如果是其他编辑器
 	1. 为使 ```.editorconfig``` 正常使用，请 [点击链接](http://editorconfig.org/#download) 查看本编辑器是否需要下载插件，如需下载，请按要求安装
 	2. 为使 ```tslint.json``` 与编辑器正常关联，请 [点击链接](https://palantir.github.io/tslint/usage/third-party-tools/) 查看本编辑器与 tslint.json 的集成方法
+	3. 为使 ```.stylelintrc``` 与编辑器正常关联，请 [点击链接](https://stylelint.io/user-guide/complementary-tools/) 查看本编辑器与 .stylelintrc 的集成方法
 
 ### 启动项目
 
