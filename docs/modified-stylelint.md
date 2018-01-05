@@ -1,6 +1,6 @@
 # StyleLint 规则修改
 
-## 1. selector-pseudo-class-no-unknown (刘开 改)
+## 1. selector-pseudo-class-no-unknown
 
 * 状态 **待讨论**
 
