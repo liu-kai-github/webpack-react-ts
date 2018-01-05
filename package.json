@@ -48,8 +48,10 @@
   "dependencies": {
     "@types/react": "^16.0.31",
     "@types/react-dom": "^16.0.3",
+    "@types/react-router": "^4.0.20",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0"
   },
   "pre-commit": [
     "lint",
