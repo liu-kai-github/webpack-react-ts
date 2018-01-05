@@ -31,7 +31,7 @@ const devConfig: webpack.Configuration = merge(commonConfig, {
             //     ],
             // },
             {
-                test: /\.less/,
+                test: /\.less$/,
                 use: [
                     "style-loader",
                     {
