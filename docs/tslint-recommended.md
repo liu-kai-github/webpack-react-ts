@@ -293,7 +293,7 @@ export const jsRules = {
 };
 ```
 
-## tslint-react 规则
+## tslint-react
 
 ```
 module.exports = {
